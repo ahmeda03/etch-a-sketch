@@ -9,7 +9,12 @@ body {
     background: darkred;
     border-radius: 25px;
     padding: 55px;
+    padding-top: 35px;
     padding-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .sketchContainer {
@@ -22,7 +27,6 @@ body {
 .sketchButtons {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
 }
 
 .sketchButton {
@@ -37,8 +41,17 @@ body {
     width: 25px; 
     height: 25px; 
     border: 1px solid black;
-    
-    flex: none;
+}
+
+.promptContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.promptButton {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .boxHoveredOver {
