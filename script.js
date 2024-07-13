@@ -1,3 +1,16 @@
+generateSketchPad();
+
+const sketchContainer = document.querySelector(".sketchContainer");
+sketchContainer.addEventListener('mouseover', activateBox);
+
+function activateBox(event) {
+    let boxID = event.target.id;
+    if (boxID) {
+        let box = document.querySelector(`#\\3${boxID[0]} ${boxID.slice(1)}`);
+        box.classList.add("boxHoveredOver");
+    }
+}
+
 function generateSketchPad() {
     /*
     INIT container by grabbing reference to sketch pad container
@@ -30,8 +43,4 @@ function generateSketchPad() {
         } 
     }
 }
-
-
-
-generateSketchPad();
 

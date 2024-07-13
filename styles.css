@@ -14,3 +14,7 @@
     
     flex: none;
 }
+
+.boxHoveredOver {
+    background-color: black;
+}
