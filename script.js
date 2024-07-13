@@ -24,6 +24,7 @@ function generateSketchPad() {
     for (let i = 0; i < SKETCHPAD_WIDTH; i++) {
         for (let k = 0; k < SKETCHPAD_HEIGHT; k++) {
             sketchBox = document.createElement("div");
+            sketchBox.classList.add("sketchBox");
             sketchBox.setAttribute("id", k + SKETCHPAD_HEIGHT * i);
             sketchContainer.appendChild(sketchBox);
         } 
