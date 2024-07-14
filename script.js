@@ -1,5 +1,5 @@
 const sketchContainer = document.querySelector(".sketchContainer");
-const resizeButton = document.querySelector(".promptButton");
+const resizeButton = document.querySelector(".resizeButton");
 
 generateSketchPad();
 sketchContainer.addEventListener("mouseover", activateBox);
@@ -12,6 +12,8 @@ function activateBox(event) {
         box.classList.add("boxHoveredOver");
     }
 }
+
+
 
 function generateSketchPad(numOfBoxes = 16) {
     /*
@@ -79,8 +81,6 @@ function resizeSketchPad() {
     CALL generateSketchPad to create the new sketchpad
     */
     let numOfBoxes = (prompt("Enter the number of boxes: "));
-
-    console.log((+numOfBoxes), numOfBoxes);
 
     if (numOfBoxes === "" || isNaN(+numOfBoxes)) {
         alert("Please enter a valid value.");

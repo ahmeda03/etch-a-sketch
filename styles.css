@@ -25,7 +25,7 @@ body {
     height: 960px; 
 }
 
-.sketchContainer, .sketchButtons, .promptContainer {
+.sketchContainer, .sketchButtons, .buttonContainer {
     width: 850px;
 }
 
@@ -53,12 +53,12 @@ body {
     border: 1px solid black;
 }
 
-.promptContainer {
+.buttonContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.promptButton {
+.resizeButton, .resetButton {
     background-color: white;
     border-radius: 15px;
     padding: 5px;
