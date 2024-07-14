@@ -1,9 +1,11 @@
 const sketchContainer = document.querySelector(".sketchContainer");
 const resizeButton = document.querySelector(".resizeButton");
+const resetButton = document.querySelector(".resetButton");
 
 generateSketchPad();
 sketchContainer.addEventListener("mouseover", activateBox);
 resizeButton.addEventListener("click", resizeSketchPad);
+resetButton.addEventListener("click", resetSketchPad);
 
 function activateBox(event) {
     let boxID = event.target.id;
@@ -12,8 +14,6 @@ function activateBox(event) {
         box.classList.add("boxHoveredOver");
     }
 }
-
-
 
 function generateSketchPad(numOfBoxes = 16) {
     /*
@@ -93,4 +93,18 @@ function resizeSketchPad() {
         deleteSketchPad();
         generateSketchPad(numOfBoxes);
     }   
+}
+
+function resetSketchPad() {
+    /*
+    INIT references to the entire list of sketch boxes
+    FOR each sketch box 
+        Remove hover class
+    END FOR
+    */
+
+    const sketchBoxes = document.querySelectorAll(".sketchContainer > .sketchBox");
+    for (const box of sketchBoxes) {
+        box.classList.remove("boxHoveredOver");
+    }
 }
